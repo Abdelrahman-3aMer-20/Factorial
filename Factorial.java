@@ -1,24 +1,25 @@
-//
-// Source code recreated from a .class file by IntelliJ IDEA
-// (powered by FernFlower decompiler)
-//
-
 import java.util.Scanner;
 
-public class Main {
-    public Main() {
-    }
+public class Factorial {
 
     public static void main(String[] args) {
-        System.out.println("Enter The Num:");
-        Scanner input = new Scanner(System.in);
-        int num = input.nextInt();
-        int fact = 1;
 
-        for(int i = 1; i <= num; ++i) {
-            fact *= i;
-        }
+        int num;
+        System.out.println("Enter an integer: ");
 
-        System.out.println(fact);
+        Scanner sc = new Scanner(System.in);
+
+        num = sc.nextInt();
+        System.out.println(factorial(num));
     }
+
+    public static int factorial(int n) {
+        if(n == 1) {
+            return 1;
+        } else {
+
+            return n * factorial(n-1);
+        }
+    }
+
 }
